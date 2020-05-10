@@ -3,6 +3,7 @@ HOST_APP_DIR=../webman
 CONTAINER_APP_DIR=/usr/src/myapp
 HOST_PORT=8787
 CONTAINER_PORT=8787
+INSTALL_COMPOSER=true
 COMPOSER_INSTALLER=https://install.phpcomposer.com/installer
 COMPOSER_MIRROR=https://mirrors.aliyun.com/composer/
 INSTALL_LIB_EVENT=true
