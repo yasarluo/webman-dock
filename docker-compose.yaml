@@ -1,0 +1,19 @@
+version: '3'
+services:
+  webman:
+    build:
+      context: ./
+      args:
+        - CONTAINER_PORT=${CONTAINER_PORT}
+        - CONTAINER_APP_DIR=${CONTAINER_APP_DIR}
+        - COMPOSER_INSTALLER=${COMPOSER_INSTALLER}
+        - COMPOSER_MIRROR=${COMPOSER_MIRROR}
+        - INSTALL_LIB_EVENT=${INSTALL_LIB_EVENT}
+        - UBUNTU_SOURCE=${UBUNTU_SOURCE}
+        - CHANGE_UBUNTU_SOURCE=${CHANGE_UBUNTU_SOURCE}
+    image: yasarluo/webman-dock:0.1
+    ports:
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+    volumes:
+      - ${HOST_APP_DIR}:${CONTAINER_APP_DIR}
+    tty: true

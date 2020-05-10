@@ -1,0 +1,10 @@
+### set local app dir there #######
+HOST_APP_DIR=../webman
+CONTAINER_APP_DIR=/usr/src/myapp
+HOST_PORT=8787
+CONTAINER_PORT=8787
+COMPOSER_INSTALLER=https://install.phpcomposer.com/installer
+COMPOSER_MIRROR=https://mirrors.aliyun.com/composer/
+INSTALL_LIB_EVENT=true
+CHANGE_UBUNTU_SOURCE=true
+UBUNTU_SOURCE=tsinghua
