@@ -48,6 +48,9 @@ RUN if [ ${INSTALL_COMPOSER} = true ]; then \
     composer config -g repo.packagist composer ${COMPOSER_MIRROR} \
 ;fi
 
+
+RUN apt-get install git zip -y
+
 # Expose port
 ARG CONTAINER_PORT
 EXPOSE ${CONTAINER_PORT}
