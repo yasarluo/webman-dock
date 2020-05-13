@@ -49,7 +49,7 @@ RUN if [ ${INSTALL_COMPOSER} = true ]; then \
 ;fi
 
 
-RUN apt-get install git zip -y
+RUN apt-get install git zip vim -y
 
 # Expose port
 ARG CONTAINER_PORT
