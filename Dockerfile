@@ -21,7 +21,7 @@ RUN if [ ${CHANGE_UBUNTU_SOURCE} = true ]; then \
 
 # Install php ext.
 RUN apt-get remove -y libssl1.1 && \
-    apt-get install libssl1.1 krb5-locales libkrb5support0=1.16-2ubuntu0.1 libkrb5-3 libgssapi-krb5-2 libcurl4 --allow-downgrades -y && \
+    apt-get install libssl1.1 krb5-locales libkrb5support0=1.16-2ubuntu0.2 libkrb5-3 libgssapi-krb5-2 libcurl4 --allow-downgrades -y && \
     docker-php-ext-install sockets pcntl && \
     docker-php-ext-install pdo_mysql && \
     pecl install redis && \
