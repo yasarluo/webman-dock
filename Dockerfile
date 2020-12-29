@@ -12,7 +12,7 @@ ARG CHANGE_UBUNTU_SOURCE
 COPY ./sources.sh /tmp/sources.sh
 RUN if [ ${CHANGE_UBUNTU_SOURCE} = true ]; then \
     apt-get install -y gnupg2 && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32 && \
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3B4FE6ACC0B21F32 && \
     chmod +x /tmp/sources.sh && \
     /bin/bash -c /tmp/sources.sh && \
     rm -rf /tmp/sources.sh && \
